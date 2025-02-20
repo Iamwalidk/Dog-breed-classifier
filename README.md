@@ -24,10 +24,10 @@ Dog Breed Classifier - Instructions
        └── js/
            └── script.js
 
-3. Dataset:
-   - Download the dataset (e.g., from Kaggle or another source).
+3. Dataset(optional):
+   - Download the dataset: https://www.kaggle.com/datasets/catherinehorng/dogbreedidfromcomp
    - Place the downloaded ZIP file in the **Dog-breed-classifier** folder.
-   - Extract the contents right there in the same folder so that your code can access `train/` and `test/` (or however your dataset is structured).
+   - Extract the contents right there in the same folder so that your code can access `train/` and `test/`.
 
 4. Model File:
    - Place your trained model file (e.g., my_dog_breed_model.h5) in the same folder as app.py.
