@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dog Breed Identifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="app-container">
+    <h1 class="main-title">DOG BREED IDENTIFIER</h1>
+
+    <div class="content">
+      <div class="prediction-box">
+        <h2>PREDICTION</h2>
+        <div class="prediction-content {% if prediction %}show{% endif %}">
+          <p><strong>Breed:</strong> {{ prediction }}</p>
+          <p><strong>Confidence:</strong> {{ confidence }}%</p>
+        </div>
+      </div>
+
+      <div class="upload-box">
+        <div class="upload-circle" id="uploadCircle">
+          UPLOAD IMAGE
+        </div>
+        <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
+          <input class="file-input" type="file" name="file" accept="image/*" id="fileInput"/>
+          <button id="predictBtn" type="submit">PREDICT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    animation: fadeIn 0.8s ease-in-out;
+  } 
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .app-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    animation: slideDown 0.8s ease;
+  }
+  @keyframes slideDown {
+    0%   { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0);     opacity: 1; }
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .prediction-box {
+    flex: 1 1 300px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: fadeUp 1s ease;
+  }
+  @keyframes fadeUp {
+    0%   { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0);     opacity: 1; }
+  }
+  
+  .prediction-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .prediction-content {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  .prediction-content.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .upload-box {
+    flex: 1 1 300px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: fadeUp 1s ease;
+  }
+  
+  .upload-circle {
+    width: 220px;
+    height: 220px;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #999;
+    background-size: cover;
+    background-position: center;
+    transition: border 0.3s, background 0.3s;
+  }
+  .upload-circle:hover {
+    border-color: #777;
+  }
+  
+  .file-input {
+    margin: 0 auto;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  #predictBtn {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  #predictBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+  }
+  
