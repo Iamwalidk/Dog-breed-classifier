@@ -1,0 +1,54 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.dll
+*.egg-info/
+build/
+dist/
+pip-wheel-metadata/
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+.venv-convert/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local runtime artifacts
+*.log
+*.tmp
+*.temp
+
+# Model artifacts (large and environment-specific)
+*.h5
+*.keras
+temp_conversion_*.h5
+my_dog_breed_model*.h5
+models/*
+!models/.gitkeep
+!models/README.md
+
+# Dataset and generated uploads
+archive (1)/
+Dog_breed_model/*
+!Dog_breed_model/.gitkeep

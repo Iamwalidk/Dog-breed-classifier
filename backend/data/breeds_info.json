@@ -1,0 +1,248 @@
+{
+  "Labrador Retriever": {
+    "description": "Friendly, outgoing, and highly trainable sporting dog that thrives with family activity and regular exercise.",
+    "temperament": "Friendly, Active, Loyal",
+    "size": "Medium-Large",
+    "life_span": "10-12 years"
+  },
+  "Golden Retriever": {
+    "description": "Gentle, intelligent, and eager-to-please retriever known for its social nature and dependable temperament.",
+    "temperament": "Intelligent, Friendly, Devoted",
+    "size": "Large",
+    "life_span": "10-12 years"
+  },
+  "Flat-Coated Retriever": {
+    "description": "Cheerful and energetic retriever with a playful personality and strong enthusiasm for outdoor work.",
+    "temperament": "Playful, Optimistic, Energetic",
+    "size": "Medium-Large",
+    "life_span": "8-10 years"
+  },
+  "Curly-Coated Retriever": {
+    "description": "Independent and athletic retriever with a distinctive curly coat and steady working drive.",
+    "temperament": "Confident, Intelligent, Loyal",
+    "size": "Large",
+    "life_span": "9-12 years"
+  },
+  "Chesapeake Bay Retriever": {
+    "description": "Strong, hardy retriever bred for water work, known for endurance and a protective streak.",
+    "temperament": "Bright, Affectionate, Protective",
+    "size": "Medium-Large",
+    "life_span": "10-13 years"
+  },
+  "Beagle": {
+    "description": "Compact scent hound with a curious nose, upbeat personality, and strong pack-oriented instincts.",
+    "temperament": "Curious, Merry, Friendly",
+    "size": "Small-Medium",
+    "life_span": "10-15 years"
+  },
+  "German Shepherd": {
+    "description": "Versatile working dog prized for intelligence, confidence, and trainability across many roles.",
+    "temperament": "Courageous, Smart, Loyal",
+    "size": "Large",
+    "life_span": "9-13 years"
+  },
+  "French Bulldog": {
+    "description": "Compact companion dog with a playful nature, adaptable personality, and affectionate temperament.",
+    "temperament": "Playful, Adaptable, Alert",
+    "size": "Small",
+    "life_span": "10-12 years"
+  },
+  "Border Collie": {
+    "description": "Exceptionally intelligent herding dog that needs mental stimulation and structured activity.",
+    "temperament": "Intense, Smart, Responsive",
+    "size": "Medium",
+    "life_span": "12-15 years"
+  },
+  "Boxer": {
+    "description": "Energetic and loyal family dog with a strong build and an expressive, playful personality.",
+    "temperament": "Bright, Fun-Loving, Loyal",
+    "size": "Medium-Large",
+    "life_span": "10-12 years"
+  },
+  "Pug": {
+    "description": "Charming companion breed known for its clownish personality, affection, and compact size.",
+    "temperament": "Charming, Loving, Mischievous",
+    "size": "Small",
+    "life_span": "12-15 years"
+  },
+  "Siberian Husky": {
+    "description": "Endurance sled dog with high energy, social behavior, and a strong desire to run.",
+    "temperament": "Outgoing, Energetic, Mischievous",
+    "size": "Medium",
+    "life_span": "12-14 years"
+  },
+  "Doberman": {
+    "description": "Athletic and alert working breed known for speed, loyalty, and focused trainability.",
+    "temperament": "Alert, Fearless, Loyal",
+    "size": "Large",
+    "life_span": "10-12 years"
+  },
+  "Rottweiler": {
+    "description": "Powerful guardian breed with a calm, confident nature when well-trained and socialized.",
+    "temperament": "Confident, Calm, Devoted",
+    "size": "Large",
+    "life_span": "9-10 years"
+  },
+  "Chihuahua": {
+    "description": "Tiny companion dog with a bold personality, alert expression, and strong bond with owners.",
+    "temperament": "Alert, Charming, Quick",
+    "size": "Toy",
+    "life_span": "14-16 years"
+  },
+  "Pomeranian": {
+    "description": "Lively toy breed with a fluffy coat, confident attitude, and curious, social disposition.",
+    "temperament": "Bold, Inquisitive, Lively",
+    "size": "Toy",
+    "life_span": "12-16 years"
+  },
+  "Yorkshire Terrier": {
+    "description": "Small terrier with a big personality, known for confidence and close companionship.",
+    "temperament": "Spirited, Affectionate, Brave",
+    "size": "Toy",
+    "life_span": "11-15 years"
+  },
+  "Shih-Tzu": {
+    "description": "Affectionate companion dog bred for household living, with a calm and friendly demeanor.",
+    "temperament": "Affectionate, Outgoing, Gentle",
+    "size": "Small",
+    "life_span": "10-16 years"
+  },
+  "Samoyed": {
+    "description": "Friendly northern breed with a thick white coat and an energetic, people-oriented personality.",
+    "temperament": "Gentle, Adaptable, Friendly",
+    "size": "Medium-Large",
+    "life_span": "12-14 years"
+  },
+  "Weimaraner": {
+    "description": "Athletic hunting breed that requires regular exercise, structure, and strong engagement.",
+    "temperament": "Energetic, Intelligent, Loyal",
+    "size": "Large",
+    "life_span": "10-13 years"
+  },
+  "Great Dane": {
+    "description": "Giant breed with a gentle temperament, calm indoor behavior, and affectionate family bond.",
+    "temperament": "Friendly, Patient, Dependable",
+    "size": "Giant",
+    "life_span": "7-10 years"
+  },
+  "Saint Bernard": {
+    "description": "Large mountain rescue breed known for patience, gentleness, and calm companionship.",
+    "temperament": "Gentle, Watchful, Friendly",
+    "size": "Giant",
+    "life_span": "8-10 years"
+  },
+  "Newfoundland": {
+    "description": "Powerful water-rescue breed with a famously sweet temperament and strong swimming ability.",
+    "temperament": "Sweet, Patient, Loyal",
+    "size": "Giant",
+    "life_span": "9-10 years"
+  },
+  "Basset": {
+    "description": "Low-built scent hound with a calm demeanor, strong nose, and determined tracking style.",
+    "temperament": "Patient, Charming, Laid-Back",
+    "size": "Medium",
+    "life_span": "10-12 years"
+  },
+  "Bloodhound": {
+    "description": "Legendary scent hound with exceptional tracking ability and a gentle, determined disposition.",
+    "temperament": "Stubborn, Gentle, Affectionate",
+    "size": "Large",
+    "life_span": "10-12 years"
+  },
+  "Cocker Spaniel": {
+    "description": "Affectionate sporting companion with a cheerful nature and a desire to stay close to people.",
+    "temperament": "Gentle, Smart, Merry",
+    "size": "Medium",
+    "life_span": "10-14 years"
+  },
+  "English Springer": {
+    "description": "High-energy sporting dog with strong trainability and enthusiasm for activity and family life.",
+    "temperament": "Friendly, Eager, Active",
+    "size": "Medium",
+    "life_span": "12-14 years"
+  },
+  "English Springer Spaniel": {
+    "description": "High-energy sporting dog with strong trainability and enthusiasm for activity and family life.",
+    "temperament": "Friendly, Eager, Active",
+    "size": "Medium",
+    "life_span": "12-14 years"
+  },
+  "Maltese Dog": {
+    "description": "Toy companion breed with a silky coat, affectionate personality, and alert presence.",
+    "temperament": "Gentle, Playful, Affectionate",
+    "size": "Toy",
+    "life_span": "12-15 years"
+  },
+  "Miniature Poodle": {
+    "description": "Intelligent, trainable companion with an athletic build and low-shedding curly coat.",
+    "temperament": "Smart, Active, Proud",
+    "size": "Small-Medium",
+    "life_span": "12-15 years"
+  },
+  "Standard Poodle": {
+    "description": "Highly intelligent and athletic breed known for trainability and versatility.",
+    "temperament": "Smart, Active, Elegant",
+    "size": "Medium-Large",
+    "life_span": "10-18 years"
+  },
+  "Toy Poodle": {
+    "description": "Small but intelligent poodle variant with a lively temperament and strong trainability.",
+    "temperament": "Smart, Agile, Alert",
+    "size": "Toy",
+    "life_span": "12-16 years"
+  },
+  "Papillon": {
+    "description": "Small, alert companion with butterfly-like ears and a bright, energetic personality.",
+    "temperament": "Friendly, Alert, Happy",
+    "size": "Toy",
+    "life_span": "13-16 years"
+  },
+  "Pembroke": {
+    "description": "Compact herding dog with a bold personality, quick intelligence, and strong work ethic.",
+    "temperament": "Outgoing, Bright, Loyal",
+    "size": "Small-Medium",
+    "life_span": "12-13 years"
+  },
+  "Cardigan": {
+    "description": "Sturdy herding corgi variety with a calm, watchful temperament and strong family bond.",
+    "temperament": "Loyal, Watchful, Even-Tempered",
+    "size": "Small-Medium",
+    "life_span": "12-15 years"
+  },
+  "Vizsla": {
+    "description": "Lean, athletic hunting dog that thrives on exercise and close human companionship.",
+    "temperament": "Affectionate, Energetic, Gentle",
+    "size": "Medium-Large",
+    "life_span": "12-14 years"
+  },
+  "Whippet": {
+    "description": "Sleek sighthound known for bursts of speed and calm behavior at home.",
+    "temperament": "Gentle, Quiet, Athletic",
+    "size": "Medium",
+    "life_span": "12-15 years"
+  },
+  "Irish Setter": {
+    "description": "Elegant sporting dog with high energy, sociability, and a striking red coat.",
+    "temperament": "Outgoing, Sweet-Natured, Active",
+    "size": "Large",
+    "life_span": "12-15 years"
+  },
+  "Scottish Deerhound": {
+    "description": "Large sighthound with a dignified temperament, gentle manners, and steady athleticism.",
+    "temperament": "Gentle, Dignified, Courteous",
+    "size": "Large",
+    "life_span": "8-11 years"
+  },
+  "West Highland White Terrier": {
+    "description": "Compact terrier with a confident personality, bright expression, and sturdy build.",
+    "temperament": "Alert, Independent, Cheerful",
+    "size": "Small",
+    "life_span": "13-15 years"
+  },
+  "Norwegian Elkhound": {
+    "description": "Nordic hunting breed with a dense coat, confidence, and strong endurance.",
+    "temperament": "Bold, Loyal, Energetic",
+    "size": "Medium",
+    "life_span": "12-15 years"
+  }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f2f0e8">
+  <title>Dog Breed Classifier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-section" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">CANINE INTELLIGENCE STUDIO</p>
+        <h1 id="heroTitle" class="main-title">Dog breed classification with a polished product feel.</h1>
+        <p class="hero-lede">
+          Upload a clear photo and get ranked breed predictions, confidence bars, and quick breed metadata in a modern, responsive interface.
+        </p>
+
+        <div class="hero-chips" aria-label="Product highlights">
+          <span class="hero-chip">Top 3 predictions</span>
+          <span class="hero-chip">Breed intelligence cards</span>
+          <span class="hero-chip">Drag and drop upload</span>
+          <span class="hero-chip">Accessible and mobile-ready</span>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Model highlights">
+        <div class="hero-metric">
+          <span class="hero-metric-label">Output</span>
+          <strong class="hero-metric-value">Top-3 ranked results</strong>
+          <p class="hero-metric-copy">Each prediction includes a confidence visualization and breed summary fields when available.</p>
+        </div>
+        <div class="hero-metric-grid">
+          <div class="hero-metric-card">
+            <span class="hero-metric-label">Input</span>
+            <strong class="hero-metric-value">JPG, PNG, JPEG</strong>
+          </div>
+          <div class="hero-metric-card">
+            <span class="hero-metric-label">Flow</span>
+            <strong class="hero-metric-value">Preview before analysis</strong>
+          </div>
+          <div class="hero-metric-card">
+            <span class="hero-metric-label">Experience</span>
+            <strong class="hero-metric-value">Fast feedback loop</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="workspace">
+      <section class="panel upload-panel" aria-labelledby="uploadPanelTitle">
+        <div class="panel-header">
+          <p class="panel-kicker">Step 1</p>
+          <h2 id="uploadPanelTitle">Upload a dog image</h2>
+          <p>Select a photo, or drag and drop one into the frame. The preview updates immediately and the analyze button activates once a file is ready.</p>
+        </div>
+
+        <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data" novalidate>
+          <label class="upload-dropzone" id="uploadPreview" for="fileInput">
+            <img id="previewImage" alt="Selected dog image preview" hidden>
+            <div class="upload-placeholder" id="uploadPlaceholder">
+              <span class="upload-placeholder-eyebrow">Drop zone</span>
+              <strong>Drag a dog photo here</strong>
+              <span>or click to browse files</span>
+            </div>
+          </label>
+
+          <div class="upload-meta-row">
+            <p id="fileMeta" class="file-meta">No image selected yet.</p>
+            <div class="upload-tag-row" aria-label="Accepted formats">
+              <span class="upload-tag">PNG</span>
+              <span class="upload-tag">JPG</span>
+              <span class="upload-tag">JPEG</span>
+              <span class="upload-tag">WEBP</span>
+              <span class="upload-tag">BMP</span>
+            </div>
+          </div>
+
+          <input
+            class="file-input"
+            type="file"
+            name="file"
+            accept="image/*"
+            id="fileInput"
+          >
+
+          <div class="button-row">
+            <button id="predictBtn" type="submit" disabled>Analyze image</button>
+            <button id="resetBtn" type="button" class="secondary-btn" hidden>Reset</button>
+          </div>
+
+          <p class="helper-text">
+            Use a well-lit photo with the dog reasonably centered for the best results. The interface keeps keyboard focus and screen-reader states intact.
+          </p>
+        </form>
+      </section>
+
+      <section class="panel results-panel" aria-labelledby="resultsPanelTitle">
+        <div class="results-header">
+          <div class="panel-header">
+            <p class="panel-kicker">Step 2</p>
+            <h2 id="resultsPanelTitle">Prediction results</h2>
+            <p id="statusText" aria-live="polite">
+              {% if predictions %}
+                Showing the latest ranked predictions.
+              {% elif prediction %}
+                Showing the latest ranked prediction.
+              {% else %}
+                Ready to analyze a dog image.
+              {% endif %}
+            </p>
+          </div>
+
+          <div id="resultsSummary" class="results-summary" {% if not predictions and not prediction %}hidden{% endif %}></div>
+        </div>
+
+        <div
+          id="errorBanner"
+          class="error-banner"
+          role="alert"
+          {% if not error %}hidden{% endif %}
+        >
+          {{ error or "" }}
+        </div>
+
+        <div id="loaderContainer" class="loader-container" hidden></div>
+
+        <p id="emptyState" class="empty-state" {% if predictions or prediction %}hidden{% endif %}>
+          Your top predictions will appear here after analysis. The top match will be highlighted first, followed by supporting candidates and breed details.
+        </p>
+
+        <div id="resultsContainer" class="predictions-grid" aria-live="polite" aria-busy="false"></div>
+
+        <noscript>
+          <div class="noscript-note">
+            JavaScript is disabled. Form submission still works, but the enhanced preview, drag-and-drop upload, and interactive result cards require JavaScript.
+          </div>
+          {% if prediction %}
+            <div class="legacy-result">
+              <p><strong>Breed:</strong> {{ prediction }}</p>
+              <p><strong>Confidence:</strong> {{ confidence }}%</p>
+            </div>
+          {% endif %}
+        </noscript>
+      </section>
+    </section>
+  </main>
+
+  <script id="initialPredictionsData" type="application/json">{{ (predictions or [])|tojson }}</script>
+  <script id="initialPredictionMetaData" type="application/json">{{ (prediction_meta if prediction_meta is defined else none)|tojson }}</script>
+  <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
